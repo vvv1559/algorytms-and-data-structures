@@ -23,4 +23,64 @@ public class InterviewTests {
         Assert.assertEquals("5", SimpleTestSystem.doTest(Anagrams.class, "aaaaaaa\naa"));
     }
 
+    private IsBinaryTree.Node node(int data, IsBinaryTree.Node left, IsBinaryTree.Node right) {
+        final IsBinaryTree.Node node = new IsBinaryTree.Node();
+        node.data = data;
+        node.left = left;
+        node.right = right;
+
+        return node;
+    }
+
+    private IsBinaryTree.Node least(int data) {
+        final IsBinaryTree.Node node = new IsBinaryTree.Node();
+        node.data = data;
+
+        return node;
+    }
+    
+    @Test
+    public void isBinaryTree() {
+        IsBinaryTree isBinaryTree = new IsBinaryTree();
+
+        IsBinaryTree.Node rootNode = node(4,
+            node(2, least(1), least(3)),
+            node(6, least(5), least(7)));
+        Assert.assertTrue(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(5,
+            node(2, least(1), least(3)),
+            node(10,
+                node(9, least(6), null),
+                node(12, least(11), null)));
+        Assert.assertTrue(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(5,
+            node(2, least(1), least(3)),
+            node(10,
+                node(9, least(4), null),
+                node(12, least(11), null)));
+        Assert.assertFalse(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(4,
+            node(2, least(1), least(3)),
+            node(10, least(9), node(11, least(7), least(12))));
+        Assert.assertFalse(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(5,
+            node(2, least(1), least(3)),
+            node(6, least(4), least(7)));
+        Assert.assertFalse(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(4,
+            node(2, least(1), least(3)),
+            node(6, least(4), least(7)));
+        Assert.assertFalse(isBinaryTree.checkBST(rootNode));
+
+        rootNode = node(4,
+            node(2, least(1), least(3)),
+            node(6, least(1), least(7)));
+        Assert.assertFalse(isBinaryTree.checkBST(rootNode));
+    }
+
 }
