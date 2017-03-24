@@ -83,4 +83,11 @@ public class InterviewTests {
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
     }
 
+
+    @Test
+    public void checkPhone() {
+        Assert.assertEquals("2\n0", SimpleTestSystem.doTest(TriesContacts.class, "4\nadd hack\nadd hackerrank\nfind hac\nfind hak"));
+        Assert.assertEquals("5\n4\n3\n2\n1\n0", SimpleTestSystem.doTest(TriesContacts.class, "11\nadd s\nadd ss\nadd sss\nadd ssss\n" +
+            "add sssss\nfind s\nfind ss\nfind sss\nfind ssss\nfind sssss\nfind ssssss"));
+    }
 }
