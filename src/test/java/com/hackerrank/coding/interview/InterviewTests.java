@@ -90,4 +90,11 @@ public class InterviewTests {
         Assert.assertEquals("5\n4\n3\n2\n1\n0", SimpleTestSystem.doTest(TriesContacts.class, "11\nadd s\nadd ss\nadd sss\nadd ssss\n" +
             "add sssss\nfind s\nfind ss\nfind sss\nfind ssss\nfind sssss\nfind ssssss"));
     }
+
+    @Test
+    public void ransomNoteTest() {
+        Assert.assertEquals("No", SimpleTestSystem.doTest(RansomNote.class, "15 17\n" +
+            "o l x imjaw bee khmla v o v o imjaw l khmla imjaw x\n" +
+            "imjaw l khmla x imjaw o l l o khmla v bee o o imjaw imjaw o"));
+    }
 }
