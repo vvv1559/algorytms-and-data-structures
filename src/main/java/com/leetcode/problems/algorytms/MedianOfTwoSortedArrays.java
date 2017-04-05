@@ -3,7 +3,7 @@ package com.leetcode.problems.algorytms;
 import com.Difficulty;
 import com.SolutionComplexity;
 
-import static com.Difficulty.Level.MEDIUM;
+import static com.Difficulty.Level.HARD;
 
 /*
 * Original text: https://leetcode.com/problems/median-of-two-sorted-arrays/#/description
@@ -26,10 +26,10 @@ import static com.Difficulty.Level.MEDIUM;
 *
 * */
 
-@Difficulty(MEDIUM)
+@Difficulty(HARD)
 class MedianOfTwoSortedArrays {
 
-    @SolutionComplexity(value = "O(log(m+n))", extraMemory = "O(1)")
+    @SolutionComplexity(complexity = "O(log(m+n))", extraMemory = "O(1)")
     double findMedianSortedArrays(int[] nums1, int[] nums2) {
         final int fullLength = nums1.length + nums2.length;
         final int secondIndex = fullLength / 2;

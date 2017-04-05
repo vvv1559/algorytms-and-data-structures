@@ -59,7 +59,7 @@ class AddTwoNumbers {
         }
     }
 
-    @SolutionComplexity(value = "O(n)", extraMemory = "O(1)")
+    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1.next == null && l1.val == 0) {
             return l2;

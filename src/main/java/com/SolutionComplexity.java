@@ -8,6 +8,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.METHOD)
 public @interface SolutionComplexity {
-    String value();
+    String complexity();
     String extraMemory();
 }

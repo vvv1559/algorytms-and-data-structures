@@ -3,9 +3,7 @@ package com.leetcode.problems.algorytms;
 import com.Difficulty;
 import com.SolutionComplexity;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import static com.Difficulty.Level.MEDIUM;
@@ -26,7 +24,7 @@ import static com.Difficulty.Level.MEDIUM;
 @Difficulty(MEDIUM)
 class LongestSubstringWithoutRepeatingCharacters {
 
-    @SolutionComplexity(value = "O(n)", extraMemory = "O(n)")
+    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(n)")
     int lengthOfLongestSubstring(String s) {
         int startPosition = 0;
         int endPosition = 0;

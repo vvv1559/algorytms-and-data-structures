@@ -26,7 +26,7 @@ import static com.Difficulty.Level.EASY;
 @Difficulty(EASY)
 class TwoSum {
 
-    @SolutionComplexity(value = "O(n)", extraMemory = "O(n)")
+    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(n)")
     int[] twoSum(int[] nums, int target) {
         final Map<Integer, Integer> values = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
