@@ -2,6 +2,7 @@ package com.leetcode.problems.algorytms;
 
 import com.Difficulty;
 import com.SolutionComplexity;
+import com.common.RomanNumber;
 
 import static com.Difficulty.Level.MEDIUM;
 
@@ -16,24 +17,6 @@ import static com.Difficulty.Level.MEDIUM;
 @Difficulty(MEDIUM)
 class IntegerToRoman {
 
-    enum RomanNumber {
-        M(1000, true),
-        D(500, false),
-        C(100, true),
-        L(50, false),
-        X(10, true),
-        V(5, false),
-        I(1, true);
-
-        final int intValue;
-        final boolean isOne;
-
-        RomanNumber(int intValue, boolean isOne) {
-            this.intValue = intValue;
-            this.isOne = isOne;
-        }
-    }
-
     @SolutionComplexity(complexity = "O(1)", extraMemory = "O(1)")
     String intToRoman(int num) {
         final StringBuilder result = new StringBuilder();
@@ -42,14 +25,14 @@ class IntegerToRoman {
         int numberIndex = 0;
         while (num > 0) {
             final RomanNumber romanianNum = values[numberIndex];
-            if (num >= romanianNum.intValue) {
+            if (num >= romanianNum.getIntValue()) {
                 result.append(romanianNum.name());
-                num -= romanianNum.intValue;
+                num -= romanianNum.getIntValue();
             } else {
-                final int nextOneIndex = numberIndex + (romanianNum.isOne ? 2 : 1);
+                final int nextOneIndex = numberIndex + (romanianNum.isOne() ? 2 : 1);
                 if (nextOneIndex < values.length) {
                     final RomanNumber nextOne = values[nextOneIndex];
-                    final int prefixVal = romanianNum.intValue - nextOne.intValue;
+                    final int prefixVal = romanianNum.getIntValue() - nextOne.getIntValue();
                     if (prefixVal <= num) {
                         result.append(nextOne.name()).append(romanianNum.name());
                         num -= prefixVal;

@@ -1,5 +1,6 @@
 package com.leetcode.problems.algorytms;
 
+import com.common.RomanNumber;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,8 +9,8 @@ public class IntegerToRomanTest {
 
     @Test
     public void testSimpleValues() throws Exception {
-        for (IntegerToRoman.RomanNumber number: IntegerToRoman.RomanNumber.values()){
-            Assert.assertEquals(number.name(), integerToRoman.intToRoman(number.intValue));
+        for (RomanNumber number : RomanNumber.values()) {
+            Assert.assertEquals(number.name(), integerToRoman.intToRoman(number.getIntValue()));
         }
     }
 
