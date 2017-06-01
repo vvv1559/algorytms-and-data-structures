@@ -12,6 +12,10 @@ public enum RomanNumber {
     private final int intValue;
     private final boolean isOne;
 
+    public static RomanNumber fromChar(char c) {
+        return RomanNumber.valueOf(Character.toString(c));
+    }
+
     RomanNumber(int intValue, boolean isOne) {
         this.intValue = intValue;
         this.isOne = isOne;
