@@ -10,6 +10,25 @@ public class ListNode {
         val = x;
     }
 
+    public static ListNode buildList(int... values) {
+        ListNode result = null;
+        ListNode currentNode = null;
+        for (int i : values) {
+            ListNode nextNode = new ListNode(i);
+            result = result == null ? nextNode : result;
+
+            if (currentNode == null) {
+                currentNode = nextNode;
+            } else {
+                currentNode.next = nextNode;
+                currentNode = nextNode;
+            }
+        }
+
+        return result;
+    }
+
+
     @Override
     public String toString() {
         return "ListNode{" +
