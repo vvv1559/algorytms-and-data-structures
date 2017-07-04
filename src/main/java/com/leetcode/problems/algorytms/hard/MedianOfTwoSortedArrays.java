@@ -1,4 +1,4 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.hard;
 
 import com.Difficulty;
 import com.SolutionComplexity;

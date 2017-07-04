@@ -1,6 +1,7 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.medium;
 
 import com.common.RomanNumber;
+import com.leetcode.problems.algorytms.medium.IntegerToRoman;
 import org.junit.Assert;
 import org.junit.Test;
 

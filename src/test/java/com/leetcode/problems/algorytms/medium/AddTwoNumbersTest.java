@@ -1,5 +1,6 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.medium;
 
+import com.leetcode.problems.algorytms.medium.AddTwoNumbers;
 import org.junit.Assert;
 import org.junit.Test;
 

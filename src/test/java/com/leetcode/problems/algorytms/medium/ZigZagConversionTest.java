@@ -1,9 +1,7 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.medium;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ZigZagConversionTest {
     private final ZigZagConversion zigZagConversion = new ZigZagConversion();

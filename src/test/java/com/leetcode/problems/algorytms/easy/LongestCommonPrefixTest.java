@@ -1,5 +1,6 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.easy;
 
+import com.leetcode.problems.algorytms.easy.LongestCommonPrefix;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
-package com.leetcode.problems.algorytms;
+package com.leetcode.problems.algorytms.hard;
 
+import com.leetcode.problems.algorytms.hard.MedianOfTwoSortedArrays;
 import org.junit.Assert;
 import org.junit.Test;
 
