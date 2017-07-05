@@ -15,12 +15,17 @@ import static com.Difficulty.Level.EASY;
 * */
 
 @Difficulty(EASY)
-class MergeTwoSortedLists {
+public class MergeTwoSortedLists {
 
     @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
-    ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode head = null;
-        ListNode currentNode = null;
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null) {
+            return l2;
+        } else if (l2 == null) {
+            return l1;
+        }
+        ListNode head = new ListNode(-1);
+        ListNode currentNode = head;
         while (l1 != null || l2 != null) {
             ListNode nextNode;
             if (l2 == null || l1 != null && l1.val < l2.val) {
@@ -32,16 +37,10 @@ class MergeTwoSortedLists {
             }
 
             nextNode = new ListNode(nextNode.val);
-
-            if (head == null) {
-                head = nextNode;
-                currentNode = nextNode;
-            } else {
-                currentNode.next = nextNode;
-                currentNode = nextNode;
-            }
+            currentNode.next = nextNode;
+            currentNode = nextNode;
         }
 
-        return head;
+        return head.next;
     }
 }

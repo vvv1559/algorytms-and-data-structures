@@ -10,6 +10,16 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode(ListNode copyNode) {
+        if (copyNode != null) {
+            val = copyNode.val;
+
+            if (copyNode.next != null) {
+                next = new ListNode(copyNode.next);
+            }
+        }
+    }
+
     public static ListNode buildList(int... values) {
         ListNode result = null;
         ListNode currentNode = null;
