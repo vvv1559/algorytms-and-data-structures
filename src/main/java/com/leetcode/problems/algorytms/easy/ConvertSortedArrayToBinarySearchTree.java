@@ -1,12 +1,8 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
 import com.common.TreeNode;
 
-import static com.Difficulty.Level.EASY;
 
-
-@Difficulty(EASY)
 class ConvertSortedArrayToBinarySearchTree {
 
     TreeNode sortedArrayToBST(int[] nums) {

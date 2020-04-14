@@ -38,48 +38,48 @@ public class InterviewTests {
 
         return node;
     }
-    
+
     @Test
     public void isBinaryTree() {
         IsBinaryTree isBinaryTree = new IsBinaryTree();
 
         IsBinaryTree.Node rootNode = node(4,
-            node(2, least(1), least(3)),
-            node(6, least(5), least(7)));
+                node(2, least(1), least(3)),
+                node(6, least(5), least(7)));
         Assert.assertTrue(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(5,
-            node(2, least(1), least(3)),
-            node(10,
-                node(9, least(6), null),
-                node(12, least(11), null)));
+                node(2, least(1), least(3)),
+                node(10,
+                        node(9, least(6), null),
+                        node(12, least(11), null)));
         Assert.assertTrue(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(5,
-            node(2, least(1), least(3)),
-            node(10,
-                node(9, least(4), null),
-                node(12, least(11), null)));
+                node(2, least(1), least(3)),
+                node(10,
+                        node(9, least(4), null),
+                        node(12, least(11), null)));
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(4,
-            node(2, least(1), least(3)),
-            node(10, least(9), node(11, least(7), least(12))));
+                node(2, least(1), least(3)),
+                node(10, least(9), node(11, least(7), least(12))));
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(5,
-            node(2, least(1), least(3)),
-            node(6, least(4), least(7)));
+                node(2, least(1), least(3)),
+                node(6, least(4), least(7)));
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(4,
-            node(2, least(1), least(3)),
-            node(6, least(4), least(7)));
+                node(2, least(1), least(3)),
+                node(6, least(4), least(7)));
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
 
         rootNode = node(4,
-            node(2, least(1), least(3)),
-            node(6, least(1), least(7)));
+                node(2, least(1), least(3)),
+                node(6, least(1), least(7)));
         Assert.assertFalse(isBinaryTree.checkBST(rootNode));
     }
 
@@ -88,13 +88,13 @@ public class InterviewTests {
     public void checkPhone() {
         Assert.assertEquals("2\n0", SimpleTestSystem.doTest(TriesContacts.class, "4\nadd hack\nadd hackerrank\nfind hac\nfind hak"));
         Assert.assertEquals("5\n4\n3\n2\n1\n0", SimpleTestSystem.doTest(TriesContacts.class, "11\nadd s\nadd ss\nadd sss\nadd ssss\n" +
-            "add sssss\nfind s\nfind ss\nfind sss\nfind ssss\nfind sssss\nfind ssssss"));
+                "add sssss\nfind s\nfind ss\nfind sss\nfind ssss\nfind sssss\nfind ssssss"));
     }
 
     @Test
     public void ransomNoteTest() {
         Assert.assertEquals("No", SimpleTestSystem.doTest(RansomNote.class, "15 17\n" +
-            "o l x imjaw bee khmla v o v o imjaw l khmla imjaw x\n" +
-            "imjaw l khmla x imjaw o l l o khmla v bee o o imjaw imjaw o"));
+                "o l x imjaw bee khmla v o v o imjaw l khmla imjaw x\n" +
+                "imjaw l khmla x imjaw o l l o khmla v bee o o imjaw imjaw o"));
     }
 }

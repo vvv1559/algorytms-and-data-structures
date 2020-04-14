@@ -1,11 +1,6 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
 
-import static com.Difficulty.Level.EASY;
-
-
-@Difficulty(EASY)
 class RotateArray {
 
     void rotate(int[] nums, int k) {

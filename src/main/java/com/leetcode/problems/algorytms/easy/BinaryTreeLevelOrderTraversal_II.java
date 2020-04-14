@@ -1,14 +1,14 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
 import com.common.TreeNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-import static com.Difficulty.Level.EASY;
 
-
-@Difficulty(EASY)
 class BinaryTreeLevelOrderTraversal_II {
 
     List<List<Integer>> levelOrderBottom(TreeNode root) {

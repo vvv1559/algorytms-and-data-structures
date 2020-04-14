@@ -6,9 +6,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 /*
-* Original text on https://www.hackerrank.com/challenges/ctci-ransom-note
-* TODO: Add text
-* */
+ * Original text on https://www.hackerrank.com/challenges/ctci-ransom-note
+ * TODO: Add text
+ * */
 public class RansomNote {
 
     public static void main(String[] args) {

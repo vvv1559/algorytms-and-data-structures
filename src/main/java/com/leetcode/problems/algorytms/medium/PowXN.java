@@ -1,21 +1,15 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Original text: https://leetcode.com/problems/powx-n/#/description
-*
-* Implement pow(x, n).
-*
-* */
+ * Original text: https://leetcode.com/problems/powx-n/#/description
+ *
+ * Implement pow(x, n).
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class PowXN {
 
-    @SolutionComplexity(complexity = "O(1)", extraMemory = "O(1)")
     double myPow(double x, int n) {
         if (n == 0) {
             return 1;

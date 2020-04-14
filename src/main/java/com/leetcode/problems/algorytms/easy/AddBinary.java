@@ -1,27 +1,19 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import java.util.Arrays;
-
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/add-binary/description/
-*
-* Given two binary strings, return their sum (also a binary string).
-*
-* For example,
-* a = "11"
-* b = "1"
-* Return "100".
-* */
+ * Original text: https://leetcode.com/problems/add-binary/description/
+ *
+ * Given two binary strings, return their sum (also a binary string).
+ *
+ * For example,
+ * a = "11"
+ * b = "1"
+ * Return "100".
+ * */
 
-@Difficulty(EASY)
 class AddBinary {
 
-    @SolutionComplexity(complexity = "O(max(a, b)", extraMemory = "O(max(a, b))")
     String addBinary(String a, String b) {
         int aIndex = a.length();
         if (aIndex == 0) return b;

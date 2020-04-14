@@ -17,9 +17,9 @@ public class GroupAnagramsTest {
     public void fromExample() throws Exception {
         String[] given = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
         List<List<String>> expected = Arrays.asList(
-            Arrays.asList("ate", "eat","tea"),
-            Arrays.asList("nat","tan"),
-            Collections.singletonList("bat")
+                Arrays.asList("ate", "eat", "tea"),
+                Arrays.asList("nat", "tan"),
+                Collections.singletonList("bat")
         );
 
         expected.forEach(Collections::sort);

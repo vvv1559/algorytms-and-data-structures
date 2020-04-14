@@ -25,7 +25,7 @@ public class AddTwoNumbersTest {
     }
 
     private static String toDigit(ListNode listNode) {
-        return  "" + (listNode.next == null ? listNode.val : toDigit(listNode.next) + listNode.val);
+        return "" + (listNode.next == null ? listNode.val : toDigit(listNode.next) + listNode.val);
     }
 
     private void checkNumbers(ListNode first, ListNode second) {

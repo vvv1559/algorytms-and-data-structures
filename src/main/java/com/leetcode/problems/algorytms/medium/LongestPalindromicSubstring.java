@@ -1,31 +1,24 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-import javafx.util.Pair;
-
-import static com.Difficulty.Level.MEDIUM;
-
 /*
-* Original text: https://leetcode.com/problems/longest-palindromic-substring/#/description
-*
-* Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-*
-* Example:
-*
-* Input: "babad"
-* Output: "bab"
-*
-* Note: "aba" is also a valid answer.
-*
-* Example:
-*
-* Input: "cbbd"
-* Output: "bb"
-*
-* */
+ * Original text: https://leetcode.com/problems/longest-palindromic-substring/#/description
+ *
+ * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+ *
+ * Example:
+ *
+ * Input: "babad"
+ * Output: "bab"
+ *
+ * Note: "aba" is also a valid answer.
+ *
+ * Example:
+ *
+ * Input: "cbbd"
+ * Output: "bb"
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class LongestPalindromicSubstring {
     private int[] findMaxPalindromeRange(String s, int start, int end) {
         int[] range = new int[2];
@@ -45,7 +38,6 @@ class LongestPalindromicSubstring {
         return range[1] - range[0];
     }
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     String longestPalindrome(String s) {
         if (s.length() < 2) {
             return s;
@@ -55,12 +47,12 @@ class LongestPalindromicSubstring {
 
         for (int i = 0; i < s.length(); i++) {
             int[] range = findMaxPalindromeRange(s, i, i);
-            if (rangeLen(range)> rangeLen(maxRange)){
+            if (rangeLen(range) > rangeLen(maxRange)) {
                 maxRange = range;
             }
 
             range = findMaxPalindromeRange(s, i, i + 1);
-            if (rangeLen(range)> rangeLen(maxRange)){
+            if (rangeLen(range) > rangeLen(maxRange)) {
                 maxRange = range;
             }
         }

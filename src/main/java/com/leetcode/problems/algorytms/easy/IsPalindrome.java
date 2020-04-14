@@ -1,28 +1,22 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/valid-palindrome/description/
-*
-* Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
-* For example,
-*
-* "A man, a plan, a canal: Panama" is a palindrome.
-* "race a car" is not a palindrome.
-*
-* Note:
-* Have you consider that the string might be empty? This is a good question to ask during an interview.
-* For the purpose of this problem, we define empty string as valid palindrome.
-* */
+ * Original text: https://leetcode.com/problems/valid-palindrome/description/
+ *
+ * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+ * For example,
+ *
+ * "A man, a plan, a canal: Panama" is a palindrome.
+ * "race a car" is not a palindrome.
+ *
+ * Note:
+ * Have you consider that the string might be empty? This is a good question to ask during an interview.
+ * For the purpose of this problem, we define empty string as valid palindrome.
+ * */
 
-@Difficulty(EASY)
 class IsPalindrome {
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     boolean isPalindrome(String s) {
         int start = 0;
         int end = s.length() - 1;

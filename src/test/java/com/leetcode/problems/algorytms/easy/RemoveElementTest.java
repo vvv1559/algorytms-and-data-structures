@@ -24,7 +24,7 @@ public class RemoveElementTest {
     @Test
     public void extremes() throws Exception {
         Assert.assertEquals(0, removeElement.removeElement(null, 1));
-        Assert.assertEquals(0, removeElement.removeElement(new int[]{3,3,3,3,3}, 3));
+        Assert.assertEquals(0, removeElement.removeElement(new int[]{3, 3, 3, 3, 3}, 3));
         int[] arr = new int[]{1, 2, 3, 4, 5};
         int[] arrCopy = Arrays.copyOf(arr, arr.length);
         Assert.assertEquals(arrCopy.length, removeElement.removeElement(arr, 10));

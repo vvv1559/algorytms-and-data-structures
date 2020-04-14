@@ -1,35 +1,29 @@
 package com.leetcode.problems.algorytms.hard;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.HARD;
 
 /*
-* Original text: https://leetcode.com/problems/median-of-two-sorted-arrays/#/description
-*
-* There are two sorted arrays nums1 and nums2 of size m and n respectively.
-*
-* Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-*
-* Example 1:
-* nums1 = [1, 3]
-* nums2 = [2]
-*
-* The median is 2.0
-*
-* Example 2:
-* nums1 = [1, 2]
-* nums2 = [3, 4]
-*
-* The median is (2 + 3)/2 = 2.5
-*
-* */
+ * Original text: https://leetcode.com/problems/median-of-two-sorted-arrays/#/description
+ *
+ * There are two sorted arrays nums1 and nums2 of size m and n respectively.
+ *
+ * Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ *
+ * Example 1:
+ * nums1 = [1, 3]
+ * nums2 = [2]
+ *
+ * The median is 2.0
+ *
+ * Example 2:
+ * nums1 = [1, 2]
+ * nums2 = [3, 4]
+ *
+ * The median is (2 + 3)/2 = 2.5
+ *
+ * */
 
-@Difficulty(HARD)
 class MedianOfTwoSortedArrays {
 
-    @SolutionComplexity(complexity = "O(log(m+n))", extraMemory = "O(1)")
     double findMedianSortedArrays(int[] nums1, int[] nums2) {
         final int fullLength = nums1.length + nums2.length;
         final int secondIndex = fullLength / 2;

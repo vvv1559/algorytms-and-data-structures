@@ -17,7 +17,7 @@ public class Increment {
                 }
             }
 
-            out.println(allNines ? digits + 1: digits);
+            out.println(allNines ? digits + 1 : digits);
         }
     }
 }

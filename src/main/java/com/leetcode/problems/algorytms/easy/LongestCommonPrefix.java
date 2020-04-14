@@ -1,20 +1,14 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/longest-common-prefix/#/description
-*
-* Write a function to find the longest common prefix string amongst an array of strings.
-* */
+ * Original text: https://leetcode.com/problems/longest-common-prefix/#/description
+ *
+ * Write a function to find the longest common prefix string amongst an array of strings.
+ * */
 
-@Difficulty(EASY)
 class LongestCommonPrefix {
 
-    @SolutionComplexity(complexity = "O(n*m)", extraMemory = "O(1)")
     String longestCommonPrefix(String[] strings) {
         if (strings.length == 0) {
             return "";

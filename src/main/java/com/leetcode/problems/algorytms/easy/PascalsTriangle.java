@@ -1,34 +1,28 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/pascals-triangle/description/
-*
-* Given numRows, generate the first numRows of Pascal's triangle.
-*
-* For example, given numRows = 5,
-* Return
-* [
-*      [1],
-*     [1,1],
-*    [1,2,1],
-*   [1,3,3,1],
-*  [1,4,6,4,1]
-* ]
-* */
+ * Original text: https://leetcode.com/problems/pascals-triangle/description/
+ *
+ * Given numRows, generate the first numRows of Pascal's triangle.
+ *
+ * For example, given numRows = 5,
+ * Return
+ * [
+ *      [1],
+ *     [1,1],
+ *    [1,2,1],
+ *   [1,3,3,1],
+ *  [1,4,6,4,1]
+ * ]
+ * */
 
-@Difficulty(EASY)
 class PascalsTriangle {
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O((2 + (n-1)) *  n/ 2)")
     List<List<Integer>> generate(int numRows) {
         if (numRows == 0) {
             return Collections.emptyList();

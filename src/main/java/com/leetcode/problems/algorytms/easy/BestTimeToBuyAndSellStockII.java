@@ -1,14 +1,8 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
 
-import static com.Difficulty.Level.EASY;
-
-@Difficulty(EASY)
 class BestTimeToBuyAndSellStockII {
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) return 0;
 

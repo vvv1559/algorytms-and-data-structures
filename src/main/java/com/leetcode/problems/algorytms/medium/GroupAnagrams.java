@@ -1,26 +1,20 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Original text: https://leetcode.com/problems/powx-n/#/description
-*
-* Implement pow(x, n).
-*
-* */
+ * Original text: https://leetcode.com/problems/powx-n/#/description
+ *
+ * Implement pow(x, n).
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class GroupAnagrams {
 
-    @SolutionComplexity(complexity = "O(1)", extraMemory = "O(1)")
     List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> groupsMap = new HashMap<>();
 

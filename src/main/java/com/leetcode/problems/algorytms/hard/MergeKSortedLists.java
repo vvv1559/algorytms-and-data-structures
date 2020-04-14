@@ -1,28 +1,22 @@
 package com.leetcode.problems.algorytms.hard;
 
-import com.Difficulty;
-import com.SolutionComplexity;
 import com.common.ListNode;
 import com.leetcode.problems.algorytms.easy.MergeTwoSortedLists;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-import static com.Difficulty.Level.HARD;
 
 /*
-* Original text: https://leetcode.com/problems/merge-k-sorted-lists/#/description
-*
-* Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-*
-* */
+ * Original text: https://leetcode.com/problems/merge-k-sorted-lists/#/description
+ *
+ * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+ *
+ * */
 
-@Difficulty(HARD)
 class MergeKSortedLists {
 
-    @SolutionComplexity(complexity = "O(n*m)", extraMemory = "O(n)")
     public ListNode mergeKListsHeap(ListNode[] lists) {
         if (lists == null) return null;
 
@@ -49,7 +43,6 @@ class MergeKSortedLists {
         return result.next;
     }
 
-    @SolutionComplexity(complexity = "O(n*m)", extraMemory = "O(n)")
     ListNode mergeKListsRecurse(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
             return null;

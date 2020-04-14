@@ -42,9 +42,9 @@ public class ListNode {
     @Override
     public String toString() {
         return "ListNode{" +
-            "val=" + val +
-            ", next=" + next +
-            '}';
+                "val=" + val +
+                ", next=" + next +
+                '}';
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ListNode {
         if (o == null || getClass() != o.getClass()) return false;
         ListNode listNode = (ListNode) o;
         return val == listNode.val &&
-            Objects.equals(next, listNode.next);
+                Objects.equals(next, listNode.next);
     }
 
     @Override

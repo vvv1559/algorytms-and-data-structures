@@ -1,25 +1,19 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
-*
-* The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
-*
-* Note:
-*
-* A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
-*
-* */
+ * Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+ *
+ * The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+ *
+ * Note:
+ *
+ * A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class ValidSudoku {
 
-    @SolutionComplexity(complexity = "O(n^2)", extraMemory = "O(n)")
     boolean isValidSudoku(char[][] board) {
         int[] usedInRows = new int[9];
         int[] usedInColumns = new int[9];
@@ -32,8 +26,8 @@ class ValidSudoku {
                     value = 1 << value;
                     int squareIndex = 3 * (row / 3) + column / 3;
                     if ((value & usedInRows[row]) == value ||
-                        (value & usedInColumns[column]) == value ||
-                        (value & usedInSquares[squareIndex]) == value) {
+                            (value & usedInColumns[column]) == value ||
+                            (value & usedInSquares[squareIndex]) == value) {
                         return false;
                     }
 

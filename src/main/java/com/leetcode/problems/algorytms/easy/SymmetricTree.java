@@ -1,15 +1,11 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
 import com.common.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import static com.Difficulty.Level.EASY;
 
-
-@Difficulty(EASY)
 class SymmetricTree {
 
     public boolean isSymmetric(TreeNode root) {

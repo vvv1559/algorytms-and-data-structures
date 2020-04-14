@@ -1,23 +1,18 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
 import com.common.RomanNumber;
 
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Original text: https://leetcode.com/problems/integer-to-roman/#/description
-*
-* Given an integer, convert it to a roman numeral.
-*
-* Input is guaranteed to be within the range from 1 to 3999.
-* */
+ * Original text: https://leetcode.com/problems/integer-to-roman/#/description
+ *
+ * Given an integer, convert it to a roman numeral.
+ *
+ * Input is guaranteed to be within the range from 1 to 3999.
+ * */
 
-@Difficulty(MEDIUM)
 class IntegerToRoman {
 
-    @SolutionComplexity(complexity = "O(1)", extraMemory = "O(1)")
     String intToRoman(int num) {
         final StringBuilder result = new StringBuilder();
 

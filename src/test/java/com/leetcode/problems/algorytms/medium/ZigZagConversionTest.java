@@ -8,10 +8,10 @@ public class ZigZagConversionTest {
 
 
     /*
-    * P   A   H   N
-    * A P L S I I G
-    * Y   I   R
-    * */
+     * P   A   H   N
+     * A P L S I I G
+     * Y   I   R
+     * */
     @Test
     public void fromSample() throws Exception {
         Assert.assertEquals("PAHNAPLSIIGYIR", zigZagConversion.convert("PAYPALISHIRING", 3));
@@ -19,11 +19,11 @@ public class ZigZagConversionTest {
 
 
     /*
-    * P     I     N
-    * A   L S   I G
-    * Y A   H R
-    * P     I
-    * */
+     * P     I     N
+     * A   L S   I G
+     * Y A   H R
+     * P     I
+     * */
     @Test
     public void inFourLines() throws Exception {
         Assert.assertEquals("PINALSIGYAHRPI", zigZagConversion.convert("PAYPALISHIRING", 4));

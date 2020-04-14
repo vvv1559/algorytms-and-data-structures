@@ -44,8 +44,8 @@ public class LeftRotation {
         }
 
         /*
-        * This solution has linear algorithmic complexity
-        * */
+         * This solution has linear algorithmic complexity
+         * */
         //Check extreme situations
         if (n != 1 && d != n) {
             //When n / d == 2.0, simple solution - switch places of i and i + d elements

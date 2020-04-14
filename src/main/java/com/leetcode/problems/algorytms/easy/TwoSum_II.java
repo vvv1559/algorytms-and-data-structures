@@ -1,11 +1,6 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
 
-import static com.Difficulty.Level.EASY;
-
-
-@Difficulty(EASY)
 class TwoSum_II {
 
     int[] twoSum(int[] numbers, int target) {

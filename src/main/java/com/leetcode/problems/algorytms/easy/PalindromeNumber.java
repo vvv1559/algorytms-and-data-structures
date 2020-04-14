@@ -1,21 +1,15 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/palindrome-number/#/description
-*
-* Determine whether an integer is a palindrome. Do this without extra space.
-*
-* */
+ * Original text: https://leetcode.com/problems/palindrome-number/#/description
+ *
+ * Determine whether an integer is a palindrome. Do this without extra space.
+ *
+ * */
 
-@Difficulty(EASY)
 class PalindromeNumber {
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     boolean isPalindrome(int x) {
         if (x < 0) {
             return false;

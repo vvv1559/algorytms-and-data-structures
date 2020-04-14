@@ -1,27 +1,22 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
 import com.common.ListNode;
 
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Original text: https://leetcode.com/problems/add-two-numbers/#/description
-*
-* You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-*
-* You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-*
-* Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-* Output: 7 -> 0 -> 8
-*
-* */
+ * Original text: https://leetcode.com/problems/add-two-numbers/#/description
+ *
+ * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+ *
+ * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ *
+ * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+ * Output: 7 -> 0 -> 8
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class AddTwoNumbers {
 
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(1)")
     ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1.next == null && l1.val == 0) {
             return l2;

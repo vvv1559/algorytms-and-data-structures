@@ -1,24 +1,18 @@
 package com.leetcode.problems.algorytms.easy;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
 import java.util.Stack;
 
-import static com.Difficulty.Level.EASY;
 
 /*
-* Original text: https://leetcode.com/problems/valid-parentheses/#/description
-*
-* Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-*
-* The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
-*
-* */
+ * Original text: https://leetcode.com/problems/valid-parentheses/#/description
+ *
+ * Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+ *
+ * The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+ *
+ * */
 
-@Difficulty(EASY)
 class ValidParentheses {
-    @SolutionComplexity(complexity = "O(n)", extraMemory = "O(n)")
     boolean isValid(String s) {
         final Stack<Character> braces = new Stack<>();
 
@@ -32,8 +26,8 @@ class ValidParentheses {
 
                 final char prevBrace = braces.pop();
                 if ((brace == ')' && prevBrace != '(')
-                    || (brace == '}' && prevBrace != '{')
-                    || (brace == ']' && prevBrace != '[')) {
+                        || (brace == '}' && prevBrace != '{')
+                        || (brace == ']' && prevBrace != '[')) {
                     return false;
                 }
             } else {

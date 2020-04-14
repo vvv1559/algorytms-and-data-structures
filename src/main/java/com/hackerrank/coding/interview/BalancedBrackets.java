@@ -1,15 +1,13 @@
 package com.hackerrank.coding.interview;
 
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
 
 /*
-* Original text on https://www.hackerrank.com/challenges/ctci-balanced-brackets?h_r=next-challenge&h_v=zen
-* TODO: Add text
-* */
+ * Original text on https://www.hackerrank.com/challenges/ctci-balanced-brackets?h_r=next-challenge&h_v=zen
+ * TODO: Add text
+ * */
 public class BalancedBrackets {
 
     private static boolean isCloseBrace(char c) {
@@ -29,7 +27,7 @@ public class BalancedBrackets {
                 }
 
                 char prevC = braces.pop();
-                if(!isPair(prevC, c)) {
+                if (!isPair(prevC, c)) {
                     return false;
                 }
 
@@ -46,7 +44,7 @@ public class BalancedBrackets {
         int t = in.nextInt();
         for (int a0 = 0; a0 < t; a0++) {
             String expression = in.next();
-            System.out.println( (isBalanced(expression)) ? "YES" : "NO" );
+            System.out.println((isBalanced(expression)) ? "YES" : "NO");
         }
     }
 }

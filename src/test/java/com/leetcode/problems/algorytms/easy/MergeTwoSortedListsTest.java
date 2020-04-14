@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class MergeTwoSortedListsTest {
     private final MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
+
     @Test
     public void mergeTwoLists() throws Exception {
         ListNode fst = ListNode.buildList(1, 3, 5, 7);

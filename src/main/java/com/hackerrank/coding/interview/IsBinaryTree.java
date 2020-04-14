@@ -17,9 +17,9 @@ class IsBinaryTree {
             if (leftNode != null) {
                 final int leftNodeData = leftNode.data;
                 leftCorrect = (min == -1 || leftNodeData > min)
-                    && (max == -1 || leftNodeData < max)
-                    && leftNodeData < node.data
-                    && checkNode(leftNode, min, node.data);
+                        && (max == -1 || leftNodeData < max)
+                        && leftNodeData < node.data
+                        && checkNode(leftNode, min, node.data);
             } else {
                 leftCorrect = true;
             }
@@ -29,9 +29,9 @@ class IsBinaryTree {
             if (rightNode != null) {
                 final int rightNodeData = rightNode.data;
                 rightCorrect = (min == -1 || rightNodeData > min)
-                    && (max == -1 || rightNodeData < max)
-                    && rightNodeData > node.data
-                    && checkNode(rightNode, node.data, max);
+                        && (max == -1 || rightNodeData < max)
+                        && rightNodeData > node.data
+                        && checkNode(rightNode, node.data, max);
             } else {
                 rightCorrect = true;
             }

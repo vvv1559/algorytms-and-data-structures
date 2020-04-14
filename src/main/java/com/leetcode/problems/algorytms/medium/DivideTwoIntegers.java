@@ -1,23 +1,17 @@
 package com.leetcode.problems.algorytms.medium;
 
-import com.Difficulty;
-import com.SolutionComplexity;
-
-import static com.Difficulty.Level.MEDIUM;
 
 /*
-* Original text: https://leetcode.com/problems/divide-two-integers/#/description
-*
-* Divide two integers without using multiplication, division and mod operator.
-*
-* If it is overflow, return MAX_INT.
-*
-* */
+ * Original text: https://leetcode.com/problems/divide-two-integers/#/description
+ *
+ * Divide two integers without using multiplication, division and mod operator.
+ *
+ * If it is overflow, return MAX_INT.
+ *
+ * */
 
-@Difficulty(MEDIUM)
 class DivideTwoIntegers {
 
-    @SolutionComplexity(complexity = "O(1)", extraMemory = "O(1)")
     int divide(int dividend, int divisor) {
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
