@@ -5,21 +5,22 @@ from jinja2 import Environment, FileSystemLoader
 
 ROW_SIZE = 120
 
-OUTPUT_PATH = '../src/main/java/com/leetcode/problems/algorytms'
+OUTPUT_PATH = '../leetcode/src/main/java/com/github/vvv1559/algorithms/leetcode'
 
 
 def create_java_file(url):
     question_content = lc.get_question_content(url)
-    difficulty = question_content.get('difficulty').lower()
 
     env = Environment(loader=FileSystemLoader('.'))
     template = env.get_template('template.jinja2')
     class_name = question_content.get('title').replace(' ', '')
+    if class_name[0].isdigit():
+        class_name = '_' + class_name
 
     for snippet in question_content.get('codeSnippets'):
         if snippet.get('langSlug') == 'java':
             parts = {
-                'difficulty': difficulty,
+                'difficulty': question_content.get('difficulty').lower(),
                 'title': question_content.get('title'),
                 'description': cleanup_content(question_content.get('content')),
                 'originalLink': url,
@@ -28,7 +29,7 @@ def create_java_file(url):
             }
 
             file_content = template.render(parts)
-            result_file = "{}/{}/{}.java".format(OUTPUT_PATH, difficulty, class_name)
+            result_file = "{}/{}.java".format(OUTPUT_PATH, class_name)
             with open(result_file, "w+") as f:
                 f.write(file_content)
 
