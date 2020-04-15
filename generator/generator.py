@@ -13,9 +13,7 @@ def create_java_file(url):
 
     env = Environment(loader=FileSystemLoader('.'))
     template = env.get_template('template.jinja2')
-    class_name = question_content.get('title').replace(' ', '')
-    if class_name[0].isdigit():
-        class_name = '_' + class_name
+    class_name = build_class_name(question_content.get('title'))
 
     for snippet in question_content.get('codeSnippets'):
         if snippet.get('langSlug') == 'java':
@@ -32,6 +30,15 @@ def create_java_file(url):
             result_file = "{}/{}.java".format(OUTPUT_PATH, class_name)
             with open(result_file, "w+") as f:
                 f.write(file_content)
+
+
+def build_class_name(title):
+    parts = [word.capitalize() for word in title.replace('-', ' ').split(' ')]
+
+    if parts[0][0].isdigit():
+        parts[0] = '_' + parts[0]
+
+    return ''.join(parts)
 
 
 def cleanup_content(content):
