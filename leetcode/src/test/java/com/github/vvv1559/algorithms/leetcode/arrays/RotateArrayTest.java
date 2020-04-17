@@ -34,13 +34,6 @@ public class RotateArrayTest {
     }
 
     @Test
-    @Disabled
-    public void rotateMinusOne() {
-        rotateArray.rotate(arr, -1);
-        assertArrayEquals(new int[]{2, 3, 4, 5, 6, 7, 1}, arr);
-    }
-
-    @Test
     public void rotateTwo() {
         rotateArray.rotate(arr, 2);
         assertArrayEquals(new int[]{6, 7, 1, 2, 3, 4, 5}, arr);

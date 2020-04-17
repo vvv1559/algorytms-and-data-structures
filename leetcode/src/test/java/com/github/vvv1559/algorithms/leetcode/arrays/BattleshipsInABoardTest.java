@@ -35,7 +35,7 @@ class BattleshipsInABoardTest {
         BattleshipsInABoard battleshipsInABoard = new BattleshipsInABoard();
         char[][] board = new char[][]{new char[]{'X', 'X', 'X'}};
 
-        assertEquals(2, battleshipsInABoard.countBattleships(board));
+        assertEquals(1, battleshipsInABoard.countBattleships(board));
     }
 
     @Test
@@ -47,6 +47,6 @@ class BattleshipsInABoardTest {
                 new char[]{'.', '.', '.'}
         };
 
-        assertEquals(2, battleshipsInABoard.countBattleships(board));
+        assertEquals(0, battleshipsInABoard.countBattleships(board));
     }
 }
