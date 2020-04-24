@@ -1,0 +1,1 @@
+python3 ./generator/generator.py $1

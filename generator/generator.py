@@ -1,17 +1,20 @@
 import re
 import sys
+from pathlib import Path
+
 import util.leetcode as lc
 from jinja2 import Environment, FileSystemLoader
 
 ROW_SIZE = 120
 
-OUTPUT_PATH = '../leetcode/src/main/java/com/github/vvv1559/algorithms/leetcode'
+_CUR_DIR_ = Path(__file__).parent.resolve()
+OUTPUT_PATH = _CUR_DIR_.parent.joinpath('leetcode/src/main/java/com/github/vvv1559/algorithms/leetcode')
 
 
 def create_java_file(url):
     question_content = lc.get_question_content(url)
 
-    env = Environment(loader=FileSystemLoader('.'))
+    env = Environment(loader=FileSystemLoader(_CUR_DIR_))
     template = env.get_template('template.jinja2')
     class_name = build_class_name(question_content.get('title'))
 
